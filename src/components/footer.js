@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import styled from "styled-components"
 
 const FooterStyled = styled.footer`
@@ -20,8 +20,15 @@ const Footer = () => {
     <FooterStyled>
       © {new Date().getFullYear()}, Built with
       {` `}
-      <span style={{color: 'red', margin: '0 0.4rem'}}>&hearts;</span> {` `} by
-      <a style={{marginLeft: '0.4rem'}} target="_blank" href="https://github.com/gersongams">@gersongams</a>
+      <span style={{ color: "red", margin: "0 0.4rem" }}>&hearts;</span> {` `} by
+      <a
+        rel="noreferrer"
+        style={{ marginLeft: "0.4rem" }}
+        target="_blank"
+        href="https://github.com/gersongams"
+      >
+        @gersongams
+      </a>
     </FooterStyled>
   )
 }

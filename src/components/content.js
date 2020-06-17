@@ -25,7 +25,7 @@ const ContentStyled = styled.div`
   }
 `
 
-const Content = ({content, data}) => {
+const Content = ({content}) => {
   return (
     <ContentStyled>
       <main>{content}</main>

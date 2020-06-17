@@ -22,6 +22,10 @@ const HeaderStyled = styled.header`
   .menu {
     display: none;
   }
+  .github {
+    display: flex;
+    align-items: center;
+  }
   @media (max-width: 600px) {
     padding: 0.5rem 1.2rem;
     position: sticky;
@@ -51,13 +55,11 @@ const Header = ({ siteTitle, triggerMenu, menuOpen }) => (
         {siteTitle}
       </Link>
     </h1>
-
     <div className="github">
-      <a target="_blank" href="https://github.com/roggervalf/iam-policies">
+      <a rel="noreferrer" target="_blank" href="https://github.com/roggervalf/iam-policies">
         <AiOutlineGithub style={{fontSize: '2rem', color: 'white'}} />
       </a>
     </div>
-
     <div className="menu">
       <GiHamburgerMenu onClick={triggerMenu} style={{fontSize: '2rem', color: 'white'}} />
     </div>
