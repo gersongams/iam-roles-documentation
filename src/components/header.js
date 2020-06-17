@@ -7,7 +7,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 
 const HeaderStyled = styled.header`
   grid-area: header;
-  background: white;
+  background: ${({ theme }) => theme.colors.primary};;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,13 +16,12 @@ const HeaderStyled = styled.header`
   box-shadow: 0 2px 1px rgba(50,50,93,.03),0 1px 1px rgba(0,0,0,.03);
   z-index: 10;
   .title {
-    color: ${({ theme }) => theme.colors.primary};
+    color: white;
     text-decoration: none;
   }
   .menu {
     display: none;
   }
-  
   @media (max-width: 600px) {
     padding: 0.5rem 1.2rem;
     position: sticky;
@@ -55,12 +54,12 @@ const Header = ({ siteTitle, triggerMenu, menuOpen }) => (
 
     <div className="github">
       <a target="_blank" href="https://github.com/roggervalf/iam-policies">
-        <AiOutlineGithub style={{fontSize: '2rem', color: 'black'}} />
+        <AiOutlineGithub style={{fontSize: '2rem', color: 'white'}} />
       </a>
     </div>
 
     <div className="menu">
-      <GiHamburgerMenu onClick={triggerMenu} style={{fontSize: '2rem', color: 'black'}} />
+      <GiHamburgerMenu onClick={triggerMenu} style={{fontSize: '2rem', color: 'white'}} />
     </div>
   </HeaderStyled>
 )
